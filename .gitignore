@@ -2,3 +2,4 @@ ServerApp/node_modules/
 ServerApp/npm-debug.log
 ClientApp/node_modules/
 ClientApp/npm-debug.log
+ClientApp/build/
