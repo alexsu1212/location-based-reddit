@@ -1,9 +1,10 @@
 * {
     font-family: sans-serif;
 }
+html body{
+    background-color: #cdfd94;
+}
 #header {
-/*    background-color: #f00;*/
-/*    width: 920px;*/
     margin-top: 55px;
     padding-left: 12px;
     padding-top: 22px;
@@ -16,10 +17,10 @@
     height: 46px;
     background-color: #02be09;
 }
-#userName{
-    margin-top: 4    px;    
+#userName {
+    margin-top: 4 px;
 }
-#webSiteTitle {
+.webSiteTitle {
     text-align: center;
     margin-top: 2px;
 }
@@ -40,7 +41,6 @@
     margin-right: 26px;
     margin-top: -40px;
 }
-
 #bar>#info>h5:hover {
     color: blue;
     cursor: pointer;
@@ -53,27 +53,17 @@
     height: 40px;
     margin-top: 3px;
 }
-
 #userName {
     margin-left: 8px;
     margin-top: 5px;
 }
-
-.splitBar{
+.splitBar {
     width: 90%;
     height: 1px;
     background-color: #838383;
     border-color: #c4c4c4;
     border-style: solid;
     border-width: 1px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.splitBarSamll{
-    width: 80%;
-    height: 1px;
-    background-color: #bcbcbc;
     margin-left: auto;
     margin-right: auto;
 }
