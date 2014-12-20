@@ -2,7 +2,7 @@
  *
  */
 
-var actions = require('../actions/AppActionCreator');
+var actions = require('../actions/ActionLib');
 var ListItem = React.createFactory(require('./ListItem.jsx'));
 
 //

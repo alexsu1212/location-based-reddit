@@ -25,7 +25,7 @@ var comp = React.createClass({
     });
 
     return (
-        
+
          <tr>
                 <td className="article" onMouseOver={this.handleMouseMovement}
            onMouseOut={this.handleMouseMovement}
@@ -37,7 +37,7 @@ var comp = React.createClass({
                         <div className="ico minus"></div>
                     </div>
                     <div className="art_img">
-                        <img className="art_img" src="assets/img/testImg01.jpg" alt="img">
+                        <img className="art_img" src={"assets/img/testImg01.jpg"} alt="img" />
                     </div>
                     <div className="art_pen">
                         <h3 className="pen_title">Good Retaurant Sharing ~!!</h3>
