@@ -80,7 +80,7 @@ var comp = React.createClass({
 
               // 準備將新值存入 store，方法一樣是操作 actionCreator
               this.props.todoItem.name = val;
-              actions.updateTodo( this.props.todoItem );
+              actions.updatePin( this.props.todoItem );
 
           }
       }.bind(this))

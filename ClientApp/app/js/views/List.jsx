@@ -14,10 +14,10 @@ var comp = React.createClass({
   render: function() {
 
     // 取出所有要繪製的資料
-    var arrTodos = this.props.truth.arrTodos;
+    var arrPins = this.props.truth.arrPins;
 
     // 跑 loop 一筆筆建成 ListItem 元件
-    var arr = arrTodos.map(function(item){
+    var arr = arrPins.map(function(item){
 
         // 注意每個 item 要有一個獨一無二的 key 值
         return <ListItem
@@ -45,7 +45,7 @@ var comp = React.createClass({
    */
   handleClick: function( item ){
       console.log( '\n\nitem click: ', item.name );
-      actions.selectTodo(item);
+      actions.selectPin(item);
   },
 
   /**
@@ -53,7 +53,7 @@ var comp = React.createClass({
    */
   handleRemove: function( item ){
       console.log( '\n\nitem remove: ', item.name );
-      actions.removeTodo(item);
+      actions.removePin(item);
   },
 
   //

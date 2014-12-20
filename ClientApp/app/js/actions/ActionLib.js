@@ -49,7 +49,7 @@ var ActionLib = {
     /**
      * create
      */
-    createTodo: function( item ) {
+    createPin: function( item ) {
 
         // 1. 廣播給 store 知道去 optimistic 更新 view
         AppDispatcher.handleViewAction({
@@ -90,7 +90,7 @@ var ActionLib = {
     /**
      *
      */
-    selectTodo: function( item ) {
+    selectPin: function( item ) {
 
         AppDispatcher.handleViewAction({
             actionType: AppConstants.APP_SELECT,
@@ -102,7 +102,7 @@ var ActionLib = {
     /**
      *
      */
-    removeTodo: function( item ) {
+    removePin: function( item ) {
 
         AppDispatcher.handleViewAction({
             actionType: AppConstants.APP_REMOVE,
@@ -131,7 +131,7 @@ var ActionLib = {
     /**
      *
      */
-    updateTodo: function( item ) {
+    updatePin: function( item ) {
 
         AppDispatcher.handleViewAction({
             actionType: AppConstants.APP_UPDATE,
