@@ -17,13 +17,13 @@ var EventEmitter = require('events').EventEmitter; // 取得一個 pub/sub 廣�
 //
 // Public API
 
-// 等同於 TodoStore extends EventEmitter
+// 等同於 PinStore extends EventEmitter
 // 從此取得廣播的能力
-// 由於將來會返還 TodoStore 出去，因此下面寫的會全變為 public methods
+// 由於將來會返還 PinStore 出去，因此下面寫的會全變為 public methods
 var Store = {};
 
 // 所有 todo 資料
-var arrTodos = [];
+var arrPins = [];
 
 // 目前選取的 todo 項目
 var selectedItem = null;
@@ -37,8 +37,8 @@ objectAssign( Store, EventEmitter.prototype, {
      * Public API
      * 供外界取得 store 內部資料
      */
-    getTodos: function(){
-        return arrTodos;
+    getPins: function(){
+        return arrPins;
     },
 
     /**
@@ -69,9 +69,9 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
          */
         case AppConstants.APP_LOAD:
 
-            arrTodos = action.items;
+            arrPins = action.items;
 
-            console.log( 'Store 收到資料: ', arrTodos );
+            console.log( 'Store 收到資料: ', arrPins );
 
             Store.emit( AppConstants.CHANGE_EVENT );
 
@@ -82,9 +82,9 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
          */
         case AppConstants.APP_CREATE:
 
-            arrTodos.push( action.item );
+            arrPins.push( action.item );
 
-            console.log( 'Store 新增: ', arrTodos );
+            console.log( 'Store 新增: ', arrPins );
 
             Store.emit( AppConstants.CHANGE_EVENT );
 
@@ -95,11 +95,11 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
          */
         case AppConstants.APP_REMOVE:
 
-            arrTodos = arrTodos.filter( function(item){
+            arrPins = arrPins.filter( function(item){
                 return item != action.item;
             })
 
-            console.log( 'Store 刪完: ', arrTodos );
+            console.log( 'Store 刪完: ', arrPins );
 
             Store.emit( AppConstants.CHANGE_EVENT );
 
@@ -110,7 +110,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
          */
         case AppConstants.APP_UPDATE:
 
-            console.log( 'Store 更新: ', arrTodos );
+            console.log( 'Store 更新: ', arrPins );
 
             Store.emit( AppConstants.CHANGE_EVENT );
 

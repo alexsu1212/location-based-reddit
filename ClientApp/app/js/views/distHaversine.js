@@ -1,6 +1,0 @@
-function 2pointDistance(){
-	
-
-
-
-}
