@@ -7,7 +7,7 @@
 // IMPORT
 
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-// var AppConstants = require('../constants/AppConstants');
+var AppConstants = require('../constants/AppConstants');
 var actions = require('../actions/ActionLib');
 
 var objectAssign = require('object-assign');
