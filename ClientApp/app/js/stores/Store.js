@@ -7,8 +7,8 @@
 // IMPORT
 
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var AppConstants = require('../constants/AppConstants');
-var actions = require('../actions/AppActionCreator');
+// var AppConstants = require('../constants/AppConstants');
+var actions = require('../actions/ActionLib');
 
 var objectAssign = require('object-assign');
 var EventEmitter = require('events').EventEmitter; // 取得一個 pub/sub 廣播器

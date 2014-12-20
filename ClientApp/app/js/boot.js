@@ -12,7 +12,7 @@
 var MainApp = React.createFactory(require('./views/MainApp.jsx'));
 
 // var AppConstants = require('./constants/AppConstants');
-var actions = require('./actions/ActionsLib');
+var actions = require('./actions/ActionLib');
 
 $(function(){
 
