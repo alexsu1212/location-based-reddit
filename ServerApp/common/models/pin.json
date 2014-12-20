@@ -17,11 +17,11 @@
       "type": "geopoint",
       "required": true
     },
-    "upvotes": {
+    "upVotes": {
       "type": "number",
       "required": true
     },
-    "downvotes": {
+    "downVotes": {
       "type": "number",
       "required": true
     },
