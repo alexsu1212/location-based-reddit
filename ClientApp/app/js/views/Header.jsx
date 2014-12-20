@@ -2,12 +2,12 @@
  *
  */
 
-var actions = require('../actions/AppActionCreator');
+var actions = require('../actions/ActionLib');
 
 var Header = React.createClass({
 
   /**
-   * 
+   *
    */
   render: function() {
 
@@ -17,7 +17,7 @@ var Header = React.createClass({
             <p style="margin-top: 25px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
        </div>
     );
-  
+
   },
 
   noop: function(){
