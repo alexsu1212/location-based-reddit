@@ -16,15 +16,17 @@ livereload.listen();
 var paths = {
     main: './app/js/boot.js',
     css: './app/assets/css/*.css',
+    img: './app/assets/img/*',
     destDir: 'build',
-    destCSS: 'build/assets/css'
+    destCSS: 'build/assets/css',
+    destImg: 'build/assets/img'
 };
 
 /**
- * 
+ *
  */
 gulp.task('bundle-js', function() {
-    
+
     // console.log( '\nbundle-js 跑' );
 
     return browserify({
@@ -42,14 +44,14 @@ gulp.task('bundle-js', function() {
         this.end();
         gulp.src('').pipe( notify('✖ Bunlde Failed ✖') )
     })
-    
+
     // 利用 vinyl-source-stream 幫檔案取名字
     .pipe( source('bundle.js') )
-    
+
     // 接著就回到 gulp 系統做剩下事
     // 這裏是直接存檔到硬碟
     .pipe( gulp.dest('./build') )
-    
+
 });
 
 /**
@@ -71,6 +73,10 @@ gulp.task('minify-css', function() {
  * 將 index.html 與 css/ 複製到 build/ 下面
  * 才方便測試
  */
+gulp.task('copyImg', function(){
+  return gulp.src( paths.img ).pipe( gulp.dest(paths.destImg))
+})
+
 gulp.task('copy', function(){
     return gulp.src([ 'app/index.html' ], { base: 'app' } )
     .pipe( gulp.dest(paths.destDir));
@@ -82,7 +88,7 @@ gulp.task('copy', function(){
  */
 gulp.task('watch', function() {
     // console.log( 'watch 跑' );
-    
+
     gulp.watch( 'app/**/*', ['bundle-js', 'minify-css', 'copy', 'refresh'] );
 });
 
@@ -112,4 +118,4 @@ gulp.task('default', ['dev']);
  * 廣播 livereload 事件
  * 啟動 8000 server 供本地跑
  */
-gulp.task('dev', ['bundle-js', 'minify-css', 'copy', 'watch'] );
+gulp.task('dev', ['bundle-js', 'minify-css', 'copyImg', 'copy', 'watch'] );

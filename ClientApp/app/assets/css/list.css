@@ -31,17 +31,17 @@
     text-align: center;
 }
 .plus {
-    background-image: url(plus.png);
+    background-image: url(../img/plus.png);
 }
 .minus {
-    background-image: url(minus.png);
+    background-image: url(../img/minus.png);
 }
 .plus:hover {
-    background-image: url(plus-hover.png);
+    background-image: url(../img/plus-hover.png);
     cursor: pointer;
 }
 .minus:hover {
-    background-image: url(minus-hover.png);
+    background-image: url(../img/minus-hover.png);
     cursor: pointer;
 }
 .art_pen {

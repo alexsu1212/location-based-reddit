@@ -12,6 +12,7 @@ var Header = React.createClass({
   render: function() {
 
     return (
+      <div>
         <div className="bar">
             <h3 className="webSiteTitle">Location Based Reddit</h3>
 
@@ -22,11 +23,12 @@ var Header = React.createClass({
                 <h5 className="signUp">Sign Up</h5>
             </div>
         </div>
-        
+
         <div className="header">
             <h1 className="header-name"> Location Based Reddit</h1>
             <p className="header-by">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
         </div>
+      </div>
     );
 
   },
