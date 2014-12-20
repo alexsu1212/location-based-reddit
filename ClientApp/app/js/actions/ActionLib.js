@@ -40,7 +40,7 @@ var ActionLib = {
             //
             error: function( xhr, status, errText ){
                 console.log( 'xhr錯誤: ', xhr.responseText );
-                actions.revoke(item.id);
+                action.revoke(item.id);
             }
 
         })
@@ -167,4 +167,4 @@ var ActionLib = {
     noop: function(){}
 };
 
-module.exports = AppActionCreators;
+module.exports = ActionLib;
