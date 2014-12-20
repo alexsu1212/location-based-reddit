@@ -32,10 +32,11 @@ var comp = React.createClass({
     }, this)
 
     return (
-
-      <table class="table table-hover">
-          {arr}
-      </table>
+        <div class="splitBar"></div>
+        <div id="contentList">
+        <table class="table table-hover">
+              {arr}
+        </table>
     );
 
   },
