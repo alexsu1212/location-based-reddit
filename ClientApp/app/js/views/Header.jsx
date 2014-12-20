@@ -12,22 +12,21 @@ var Header = React.createClass({
   render: function() {
 
     return (
-        <div id="bar">
-        <h3 class="webSiteTitle">Location Based Reddit</h3>
-        <!--        <p class="webSiteTitle">by Team PAMM</p>-->
+        <div className="bar">
+        <h3 className="webSiteTitle">Location Based Reddit</h3>
 
-        <div id="info">
-            <img id="userImg" src="assets/img/userHeadImg.jpg" alt="userImg">
-            <h3 id="userName">陳柏安</h3>
-            <h5 id="signIn">log In</h5>
-            <h5 id="signUp">Sign Up</h5>
+        <div className="info">
+            <img className="userImg" src="assets/img/userHeadImg.jpg" alt="userImg" />
+            <h3 className="userName">陳柏安</h3>
+            <h5 className="signIn">log In</h5>
+            <h5 className="signUp">Sign Up</h5>
         </div>
     </div>
         
         
-       <div id="header">
-            <h1 id="header-name"> Location Based Reddit</h1>
-        <p id="header-by">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
+       <div className="header">
+            <h1 className="header-name"> Location Based Reddit</h1>
+        <p className="header-by">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
        </div>
     );
 

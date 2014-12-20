@@ -2,36 +2,36 @@
     font-family: sans-serif;
 }
 html body {
-    background-color: #cdfd94;
+    background-color: .cdfd94;
 }
-#header {
+.header {
     margin-top: 55px;
     padding-left: 12px;
     padding-top: 22px;
 }
-#header>#header-name {
+.header>.header-name {
     float: left;
     margin-left: 100px;
 }
-#header>#header-by{
+.header>.header-by{
     margin-top: 25px
 }
-#bar {
+.bar {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 46px;
-    background-color: #02be09;
+    background-color: .02be09;
 }
-#userName {
+.userName {
     margin-top: 4 px;
 }
 .webSiteTitle {
     text-align: center;
     margin-top: 2px;
 }
-#bar>#info {
+.bar>.info {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -39,36 +39,36 @@ html body {
     height: 46px;
     padding-left: 12px;
 }
-#bar>#info>* {
+.bar>.info>* {
     float: left;
 }
-#bar>#info>h5 {
+.bar>.info>h5 {
     clear: left;
     float: right;
     margin-right: 26px;
     margin-top: -40px;
 }
-#bar>#info>h5:hover {
+.bar>.info>h5:hover {
     color: blue;
     cursor: pointer;
 }
-#bar>#info>#signIn {
+.bar>.info>.signIn {
     margin-right: 90px;
 }
-#userImg {
+.userImg {
     width: 40px;
     height: 40px;
     margin-top: 3px;
 }
-#userName {
+.userName {
     margin-left: 8px;
     margin-top: 5px;
 }
 .splitBar {
     width: 90%;
     height: 1px;
-    background-color: #838383;
-    border-color: #c4c4c4;
+    background-color: .838383;
+    border-color: .c4c4c4;
     border-style: solid;
     border-width: 1px;
     margin-left: auto;
