@@ -116,10 +116,9 @@ var MainApp = React.createClass({
         // console.log( '\tMainApp > render' );
 
         return (
-
             <div className="wrapper">
 
-                // <Header />
+                 <Header />
 
                 // <div className="main-box">
                 //     <InputBox truth={this.state} />
