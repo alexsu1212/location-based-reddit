@@ -155,7 +155,7 @@ var MainApp = React.createClass({
 
         // 是從 Store 取資料(as the single source of truth)
         return {
-            arrTodos: Store.getTodos(),
+            arrPins: Store.getPins(),
             selectedItem: Store.getSelectedItem()
          };
     }

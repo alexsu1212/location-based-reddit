@@ -78,7 +78,7 @@ var comp = React.createClass({
 
       item.id = window.cnt++; //uuid.get();
 
-      actions.createTodo( item );
+      actions.createPin( item );
 
       // 清空輸入框，等待下一次的輸入
       this.setState({currentItem: {name:'', id: null, created: null}});
