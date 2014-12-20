@@ -13,8 +13,8 @@ var Header = React.createClass({
 
     return (
        <div id="header">
-            <h1> Location Based Reddit</h1>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
+            <h1 id="header-name"> Location Based Reddit</h1>
+        <p id="header-by">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
        </div>
     );
 
