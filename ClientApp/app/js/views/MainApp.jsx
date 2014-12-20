@@ -8,13 +8,13 @@
 // import
 
 // var React = require('react');
-var Header = React.createFactory( require('./Header.jsx') );
-var Footer = React.createFactory( require('./Footer.jsx') );
-var InputBox = React.createFactory( require('./InputBox.jsx') );
-var List = React.createFactory( require('./List.jsx') );
+// var Header = React.createFactory( require('./Header.jsx') );
+// var Footer = React.createFactory( require('./Footer.jsx') );
+// var InputBox = React.createFactory( require('./InputBox.jsx') );
+// var List = React.createFactory( require('./List.jsx') );
 
 var Store = require('../stores/Store');
-var AppConstants = require('../constants/AppConstants');
+// var AppConstants = require('../constants/AppConstants');
 
 
 //========================================================================
@@ -119,14 +119,14 @@ var MainApp = React.createClass({
 
             <div className="wrapper">
 
-                <Header />
+                // <Header />
 
-                <div className="main-box">
-                    <InputBox truth={this.state} />
-                    <List truth={this.state} />
-                </div>
+                // <div className="main-box">
+                //     <InputBox truth={this.state} />
+                //     <List truth={this.state} />
+                // </div>
 
-                <Footer />
+                // <Footer />
             </div>
         )
     },

@@ -11,8 +11,8 @@
 // v0.12 開始要用 factory 包一次才能直接呼叫
 var MainApp = React.createFactory(require('./views/MainApp.jsx'));
 
-var AppConstants = require('./constants/AppConstants');
-var actions = require('./actions/AppActionCreator');
+// var AppConstants = require('./constants/AppConstants');
+var actions = require('./actions/ActionsLib');
 
 $(function(){
 
