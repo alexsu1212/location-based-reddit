@@ -67,7 +67,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
         /**
          *
          */
-        case AppConstants.TODO_LOAD:
+        case AppConstants.APP_LOAD:
 
             arrTodos = action.items;
 
@@ -80,7 +80,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
         /**
          *
          */
-        case AppConstants.TODO_CREATE:
+        case AppConstants.APP_CREATE:
 
             arrTodos.push( action.item );
 
@@ -93,7 +93,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
         /**
          *
          */
-        case AppConstants.TODO_REMOVE:
+        case AppConstants.APP_REMOVE:
 
             arrTodos = arrTodos.filter( function(item){
                 return item != action.item;
@@ -108,7 +108,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
         /**
          *
          */
-        case AppConstants.TODO_UPDATE:
+        case AppConstants.APP_UPDATE:
 
             console.log( 'Store 更新: ', arrTodos );
 
@@ -119,7 +119,7 @@ Store.dispatchToken = AppDispatcher.register( function eventHandlers(evt){
         /**
          *
          */
-        case AppConstants.TODO_SELECT:
+        case AppConstants.APP_SELECT:
 
             console.log( 'Store 選取: ', action.item );
 
