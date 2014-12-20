@@ -1,0 +1,37 @@
+{
+  "name": "Pin",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "imgUrl": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "location": {
+      "type": "geopoint",
+      "required": true
+    },
+    "upvotes": {
+      "type": "number",
+      "required": true
+    },
+    "downvotes": {
+      "type": "number",
+      "required": true
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
