@@ -11,7 +11,7 @@
 var Header = React.createFactory( require('./Header.jsx') );
 // var Footer = React.createFactory( require('./Footer.jsx') );
 // var InputBox = React.createFactory( require('./InputBox.jsx') );
-// var List = React.createFactory( require('./List.jsx') );
+ var List = React.createFactory(require('./List.jsx'));
 
 var Store = require('../stores/Store');
 var AppConstants = require('../constants/AppConstants');
@@ -119,7 +119,7 @@ var MainApp = React.createClass({
             <div className="wrapper">
 
                  <Header />
-
+                <List truth={this.state} />
             </div>
         )
     },

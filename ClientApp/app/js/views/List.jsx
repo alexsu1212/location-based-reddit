@@ -33,9 +33,9 @@ var comp = React.createClass({
 
     return (
 
-      <div className="todo-list">
+      <table class="table table-hover">
           {arr}
-      </div>
+      </table>
     );
 
   },

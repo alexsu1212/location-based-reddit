@@ -25,19 +25,30 @@ var comp = React.createClass({
     });
 
     return (
-
-      <div className={classes}
-           onMouseOver={this.handleMouseMovement}
+        
+         <tr>
+                <td class="article" onMouseOver={this.handleMouseMovement}
            onMouseOut={this.handleMouseMovement}
            onDoubleClick={this.handleDblClick}
            onClick={this.props.onClick} >
-
-          <span>{this.props.todoItem.name}</span>
-
-          <span className="glyphicon glyphicon-remove right hide"
-                onClick={this.handleRemove} ></span>
-
-      </div>
+                    <div class="art_ctrl">
+                        <div class="ico plus"></div>
+                        <div class="like">3345</div>
+                        <div class="ico minus"></div>
+                    </div>
+                    <div class="art_img">
+                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                    </div>
+                    <div class="art_pen">
+                        <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h5 class="pen_title_sec">something really good to eat, I with everyone can ...</h5>
+                    </div>
+                    <div class="art_author">
+                        <h5 class="author">Andrew</h5>
+                        <h5 class="loca">Taiwan, Taipei City</h5>
+                    </div>
+                </td>
+            </tr>
     );
 
   },
