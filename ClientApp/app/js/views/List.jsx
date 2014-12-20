@@ -2,7 +2,7 @@
  *
  */
 
-var actions = require('../actions/AppActionCreator');
+var actions = require('../actions/ActionLib');
 var ListItem = React.createFactory(require('./ListItem.jsx'));
 
 //
@@ -33,9 +33,9 @@ var comp = React.createClass({
 
     return (
 
-      <div className="todo-list">
+      <table class="table table-hover">
           {arr}
-      </div>
+      </table>
     );
 
   },

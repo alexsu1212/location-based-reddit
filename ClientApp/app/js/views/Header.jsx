@@ -2,27 +2,22 @@
  *
  */
 
-var actions = require('../actions/AppActionCreator');
+var actions = require('../actions/ActionLib');
 
 var Header = React.createClass({
 
   /**
-   * 
+   *
    */
   render: function() {
 
-
     return (
-      
-      <header className="header">
-        
-        <p className="logo">Todo for Dummies</p>
-        
-        <input className="search-box right" type="text" defaultValue="search here" />
-
-      </header>
+       <div id="header">
+            <h1 id="header-name"> Location Based Reddit</h1>
+        <p id="header-by">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
+       </div>
     );
-  
+
   },
 
   noop: function(){

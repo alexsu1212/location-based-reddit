@@ -8,10 +8,10 @@
 // import
 
 // var React = require('react');
-// var Header = React.createFactory( require('./Header.jsx') );
+var Header = React.createFactory( require('./Header.jsx') );
 // var Footer = React.createFactory( require('./Footer.jsx') );
 // var InputBox = React.createFactory( require('./InputBox.jsx') );
-// var List = React.createFactory( require('./List.jsx') );
+ var List = React.createFactory(require('./List.jsx'));
 
 var Store = require('../stores/Store');
 var AppConstants = require('../constants/AppConstants');
@@ -60,7 +60,7 @@ var MainApp = React.createClass({
      * 主程式進入點
      */
     componentWillMount: function() {
-        TodoStore.addListener( AppConstants.CHANGE_EVENT, this._onChange );
+        Store.addListener( AppConstants.CHANGE_EVENT, this._onChange );
     },
 
     // 重要：root view 建立後第一件事，就是偵聽 store 的 change 事件
@@ -74,7 +74,7 @@ var MainApp = React.createClass({
 
     componentWillUnmount: function() {
 
-        //TodoStore.removeChangeListener(this._onChange);
+        //Store.removeChangeListener(this._onChange);
 
     },
 
@@ -116,17 +116,10 @@ var MainApp = React.createClass({
         // console.log( '\tMainApp > render' );
 
         return (
-
             <div className="wrapper">
 
-                // <Header />
-
-                // <div className="main-box">
-                //     <InputBox truth={this.state} />
-                //     <List truth={this.state} />
-                // </div>
-
-                // <Footer />
+                 <Header />
+                <List truth={this.state} />
             </div>
         )
     },
@@ -138,7 +131,7 @@ var MainApp = React.createClass({
     // private methods - 處理元件內部的事件
 
     /**
-     * Event handler for 'change' events coming from the TodoStore
+     * Event handler for 'change' events coming from the Store
      *
      * controller-view 偵聽到 model change 後
      * 執行這支，它操作另一支 private method 去跟 model 取最新值
@@ -160,10 +153,10 @@ var MainApp = React.createClass({
      */
     getTruth: function() {
 
-        // 是從 TodoStore 取資料(as the single source of truth)
+        // 是從 Store 取資料(as the single source of truth)
         return {
-            arrTodos: TodoStore.getTodos(),
-            selectedItem: TodoStore.getSelectedItem()
+            arrTodos: Store.getTodos(),
+            selectedItem: Store.getSelectedItem()
          };
     }
 

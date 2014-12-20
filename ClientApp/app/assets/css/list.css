@@ -1,0 +1,77 @@
+#contentList {
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article {
+    border-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 60px;
+    /*    background-color: #0154c6;*/
+    margin: 8px;
+}
+.article>* {
+    float: left;
+}
+.art_ctrl {
+    width: 60px;
+    height: 100%;
+    /*    background-color: #c8c6db;*/
+}
+.art_img {
+    height: 60px;
+    /*    margin-top: 3px;*/
+}
+.ico {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+.like {
+    text-align: center;
+}
+.plus {
+    background-image: url(plus.png);
+}
+.minus {
+    background-image: url(minus.png);
+}
+.plus:hover {
+    background-image: url(plus-hover.png);
+    cursor: pointer;
+}
+.minus:hover {
+    background-image: url(minus-hover.png);
+    cursor: pointer;
+}
+.art_pen {
+    width: 60%;
+    height: 100%;
+    margin-left: 3%;
+}
+.pen_title {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.pen_title_sec {
+    margin-top: -20px;
+    margin-left: 10px;
+    color: #7b7b7b;
+}
+.art_author {
+    width: 20%;
+    height: 100%;
+}
+.art_author>* {
+    
+    margin: 0px;
+}
+.art_author>.author {
+    float: right;
+    margin-top: 8px;
+}
+.art_author>.loca {
+    float: right;
+    clear: right;
+    color: #9b9b9b;
+}
