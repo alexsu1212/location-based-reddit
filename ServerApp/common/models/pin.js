@@ -38,7 +38,7 @@ module.exports = function(Pin) {
       Pin.find(
         {
           //algorithm goes here
-        }
+        },
 
         function(err, results) {
           if (err) return err;
@@ -84,6 +84,24 @@ module.exports = function(Pin) {
         }
       }
     )
+  }
+
+  function modelDidAttach() {
+    var arr = [
+      {
+        "title": "foo",
+        "imgUrl": "",
+        "content": "",
+        "location": "-98.09830558,47.49927102",
+        "upvotes": 0,
+        "downvotes": 0,
+        "createdAt": "Dec 02, 2014"
+      }
+    ];
+
+    Pin.create(arr, function(err, doc) {
+      console.log('建立結果：', doc);
+    });
   }
 
 };
