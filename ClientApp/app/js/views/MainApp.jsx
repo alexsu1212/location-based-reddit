@@ -14,7 +14,7 @@
 // var List = React.createFactory( require('./List.jsx') );
 
 var Store = require('../stores/Store');
-// var AppConstants = require('../constants/AppConstants');
+var AppConstants = require('../constants/AppConstants');
 
 
 //========================================================================

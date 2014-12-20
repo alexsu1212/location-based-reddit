@@ -1,13 +1,13 @@
 /**
  *
  */
-// var AppDispatcher = require('../dispatcher/AppDispatcher');
-// var AppConstants = require('../constants/AppConstants');
+var AppDispatcher = require('../dispatcher/AppDispatcher');
+var AppConstants = require('../constants/AppConstants');
 var Promise = require('es6-promise').Promise;
 
 // 就是個單純的 hash table
 // 因此下面所有指令皆可視為 Action static method
-var AppActionCreators = {
+var ActionLib = {
 
     /**
      * ok
@@ -16,7 +16,7 @@ var AppActionCreators = {
      */
     load: function(){
 
-        $.ajax('http://localhost:3000/api/todos/',
+        $.ajax('http://localhost:3000/api/pins/',
         {
 
             type:"GET",
@@ -29,7 +29,7 @@ var AppActionCreators = {
                 AppDispatcher.handleViewAction({
 
                     // type 是為了方便將來所有 Store 內部判斷是否要處理這個 action
-                    actionType: AppConstants.TODO_LOAD,
+                    actionType: AppConstants.APP_LOAD,
 
                     // 這裏是真正要傳出去的值
                     items: data
@@ -55,14 +55,14 @@ var AppActionCreators = {
         AppDispatcher.handleViewAction({
 
             // type 是為了方便將來所有 Store 內部判斷是否要處理這個 action
-            actionType: AppConstants.TODO_CREATE,
+            actionType: AppConstants.APP_CREATE,
 
             // 這裏是真正要傳出去的值
             item: item
         });
 
 
-        $.ajax('http://localhost:3000/api/todos/',
+        $.ajax('http://localhost:3000/api/pins/',
         {
 
             type:"POST",
@@ -93,7 +93,7 @@ var AppActionCreators = {
     selectTodo: function( item ) {
 
         AppDispatcher.handleViewAction({
-            actionType: AppConstants.TODO_SELECT,
+            actionType: AppConstants.APP_SELECT,
             item: item
         });
 
@@ -105,11 +105,11 @@ var AppActionCreators = {
     removeTodo: function( item ) {
 
         AppDispatcher.handleViewAction({
-            actionType: AppConstants.TODO_REMOVE,
+            actionType: AppConstants.APP_REMOVE,
             item: item
         });
 
-        $.ajax('http://localhost:3000/api/todos/' + item.uid,
+        $.ajax('http://localhost:3000/api/pins/' + item.uid,
         {
 
             type:"DELETE",
@@ -134,11 +134,11 @@ var AppActionCreators = {
     updateTodo: function( item ) {
 
         AppDispatcher.handleViewAction({
-            actionType: AppConstants.TODO_UPDATE,
+            actionType: AppConstants.APP_UPDATE,
             item: item
         });
 
-        $.ajax('http://localhost:3000/api/todos/',
+        $.ajax('http://localhost:3000/api/pins/',
         {
 
             type:"PUT",
