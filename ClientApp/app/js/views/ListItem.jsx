@@ -47,6 +47,9 @@ var comp = React.createClass({
                         <h5 className="author">Andrew</h5>
                         <h5 className="loca">Taiwan, Taipei City</h5>
                     </div>
+                    <div  className="info">
+                        12345667
+                    </div>
                 </td>
             </tr>
     );

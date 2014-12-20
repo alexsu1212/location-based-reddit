@@ -74,3 +74,7 @@
     clear: right;
     color: #9b9b9b;
 }
+div.info{
+    display: none;
+    opacity: 0;
+}
