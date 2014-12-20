@@ -1,13 +1,20 @@
 * {
     font-family: sans-serif;
 }
-html body{
+html body {
     background-color: #cdfd94;
 }
 #header {
     margin-top: 55px;
     padding-left: 12px;
     padding-top: 22px;
+}
+#header>#header-name {
+    float: left;
+    margin-left: 100px;
+}
+#header>#header-by{
+    margin-top: 25px
 }
 #bar {
     position: absolute;
