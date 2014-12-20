@@ -8,7 +8,7 @@
 // import
 
 // var React = require('react');
-// var Header = React.createFactory( require('./Header.jsx') );
+ var Header = React.createFactory( require('./Header.jsx') );
 // var Footer = React.createFactory( require('./Footer.jsx') );
 // var InputBox = React.createFactory( require('./InputBox.jsx') );
 // var List = React.createFactory( require('./List.jsx') );

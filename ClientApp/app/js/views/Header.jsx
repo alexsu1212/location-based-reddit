@@ -11,16 +11,11 @@ var Header = React.createClass({
    */
   render: function() {
 
-
     return (
-      
-      <header className="header">
-        
-        <p className="logo">Todo for Dummies</p>
-        
-        <input className="search-box right" type="text" defaultValue="search here" />
-
-      </header>
+       <div id="header">
+            <h1 style="float:left; margin-left:100px;"> Location Based Reddit</h1>
+            <p style="margin-top: 25px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by Team PAMM</p>
+       </div>
     );
   
   },
