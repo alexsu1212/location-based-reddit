@@ -33,7 +33,7 @@ var comp = React.createClass({
            onClick={this.props.onClick} >
                     <div className="art_ctrl">
                         <div className="ico plus"></div>
-                        <div className="like">3345</div>
+                        <div className="like">{this.props.item.upVotes - this.props.item.downVotes}</div>
                         <div className="ico minus"></div>
                     </div>
                     <div className="art_img">
@@ -41,8 +41,9 @@ var comp = React.createClass({
                     </div>
                     <div className="art_pen">
                         <h3 className="pen_title">{this.props.item.title}</h3>
-                        <h5 className="pen_title_sec longtitude">{this.props.item.location.lng}</h5>
-                        <h5 className="pen_title_sec latitude">{this.props.item.location.lat}</h5>
+                        <h5 className="pen_title_sec longtitude">Long: {this.props.item.location.lng}</h5>
+                        <h5 className="pen_title_sec latitude">Lati: {this.props.item.location.lat}</h5>
+                        <h5 className="pen_title_sec created_at">Created At: {this.props.item.createdAt}</h5>
                     </div>
                     <div className="art_author">
                         <h5 className="author">Andrew</h5>
