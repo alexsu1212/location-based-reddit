@@ -1,0 +1,50 @@
+* {
+    font-family: sans-serif;
+}
+html body {
+    background-color: #cdfd94;
+}
+
+.contentList-show {
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-show {
+    border-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 60px;
+    /*    background-color: #0154c6;*/
+    margin: 8px;
+}
+.art_ctrl-show {
+    width: 60px;
+    height: 100%;
+    /*    background-color: #c8c6db;*/
+}
+.ico-show {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+.like-show {
+    text-align: center;
+}
+.art_pen-show {
+    width: 60%;
+     height: 60px;
+    margin-left: 3%;
+}
+.pen_title-show {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.pen_title_sec-show {
+    margin-top: -20px;
+    margin-left: 10px;
+    color: #7b7b7b;
+}
+.art_author-show {
+    width: 20%;
+    height: 100%;
+}
