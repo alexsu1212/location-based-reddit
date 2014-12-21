@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="assets/css/list.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <script src="http://fb.me/react-with-addons-0.12.0-rc1.js"></script>
+
+    <script>
+        function enterPin() {
+            var id = $(this).children(".info").text();
+            alert(id);
+        }
+
+        $("html, body").on('click', 'td', enterPin);
+    </script>
 </head>
 
 <body>
@@ -15,7 +24,6 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
     <script src="bundle.js"></script>
-    <script src="js/click.js"></script>
 </body>
 
 </html>
