@@ -41,14 +41,17 @@ var comp = React.createClass({
                     </div>
                     <div className="art_pen">
                         <h3 className="pen_title">{this.props.item.title}</h3>
-                        <h5 className="pen_title_sec">something really good to eat, I with everyone can ...</h5>
+                        <h5 className="pen_title_sec longtitude">{this.props.item.location.lng}</h5>
+                        <h5 className="pen_title_sec latitude">{this.props.item.location.lat}</h5>
                     </div>
                     <div className="art_author">
                         <h5 className="author">Andrew</h5>
                         <h5 className="loca">Taiwan, Taipei City</h5>
-                     <img className="cursor" src="assets/img/cursor.png" alt="cursor" />
                     </div>
                 </td>
+                    <div  className="info">
+                        12345667
+                    </div>
             </tr>
     );
 
