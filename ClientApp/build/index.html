@@ -13,10 +13,26 @@
     <script>
         function enterPin() {
             var id = $(this).children(".info").text();
-            alert(id);
+            //            alert(id);
+
+            changeClass('.contentList', 'contentList-show');
+            changeClass('.article', 'article-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.ico', 'ico-show');
+            changeClass('.like', 'like-show');
+            changeClass('.art_pen', 'art_pen-show');
+            changeClass('.pen_title', 'pen_title-show');
+            changeClass('.pen_title_sec', 'pen_title_sec-show');
+            changeClass('.art_author', 'art_author-show');
+            changeClass('.cursor', 'cursor-show');
         }
 
         $("html, body").on('click', 'td', enterPin);
+
+        function changeClass(c1, c2) {
+            $(c1).removeClass(c1.replace('.', '')).addClass(c2);
+        }
     </script>
 
 </head>
