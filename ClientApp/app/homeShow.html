@@ -15,28 +15,9 @@
     <script>
         function enterPin() {
             var id = $(this).children(".info").text();
-            //            alert(id);
 
-            changeClass('.contentList', 'contentList-show');
-            changeClass('.article', 'article-show');
-            changeClass('.art_ctrl', 'art_ctrl-show');
-            changeClass('.art_ctrl', 'art_ctrl-show');
-            changeClass('.ico', 'ico-show');
-            changeClass('.like', 'like-show');
-            changeClass('.art_pen', 'art_pen-show');
-            changeClass('.pen_title', 'pen_title-show');
-            changeClass('.pen_title_sec', 'pen_title_sec-show');
-            changeClass('.art_author', 'art_author-show');
-            changeClass('.show', 'show-now');
-            changeClass('.cursor-show', 'cursor');
-            $(this).children('.cursor').removeClass('cursor').addClass('cursor-show');
         }
-
-        $("html, body").on('click', 'td', enterPin);
-
-        function changeClass(c1, c2) {
-            $(c1).removeClass(c1.replace('.', '')).addClass(c2);
-        }
+        $('html, body').on('click', 'td', getLocation);
     </script>
 </head>
 
@@ -79,15 +60,18 @@
                     </div>
                     <div class="art_author">
                         <h5 class="author">Andrew</h5>
-                        <h5 class="loca">Taiwan, Taipei City</h5>
-                    </div>
-                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
+                        <h5 class="loca">Taiwan, Taipei City</h5> 
+                        <img class="cursor" src="assets/img/cursor.png" alt="cursor">
                     </div>
                     <div class="info">
                         12345667
                     </div>
+
                 </td>
-            </tr><tr>
+            </tr>
+
+            <!--     --------------------------       -->
+            <tr>
                 <td class="article">
                     <div class="art_ctrl">
                         <div class="ico plus"></div>
@@ -95,7 +79,32 @@
                         <div class="ico minus"></div>
                     </div>
                     <div class="art_img">
-                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                        <img class="art_img" src="assets/img/testImg02.jpg" alt="img">
+                    </div>
+                    <div class="art_pen">
+                        <h3 class="pen_title">let go to Hackathon~!!!</h3>
+                        <h5 class="pen_title_sec">something really good can learn in hackathon ...</h5>
+                    </div>
+                    <div class="art_author">
+                        <h5 class="author">Andrew</h5>
+                        <h5 class="loca">Taiwan, Taipei City</h5>
+                    </div>
+                    <div class="info">
+                        12345667
+                    </div>
+                </td>
+            </tr>
+
+            <!--     --------------------------       -->
+            <tr>
+                <td class="article">
+                    <div class="art_ctrl">
+                        <div class="ico plus"></div>
+                        <div class="like">3345</div>
+                        <div class="ico minus"></div>
+                    </div>
+                    <div class="art_img">
+                        <img class="art_img" src="assets/img/testImg03.jpg" alt="img">
                     </div>
                     <div class="art_pen">
                         <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
@@ -105,13 +114,14 @@
                         <h5 class="author">Andrew</h5>
                         <h5 class="loca">Taiwan, Taipei City</h5>
                     </div>
-                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
-                    </div>
                     <div class="info">
                         12345667
                     </div>
                 </td>
-            </tr><tr>
+            </tr>
+
+            <!--     --------------------------       -->
+            <tr>
                 <td class="article">
                     <div class="art_ctrl">
                         <div class="ico plus"></div>
@@ -119,7 +129,7 @@
                         <div class="ico minus"></div>
                     </div>
                     <div class="art_img">
-                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                        <img class="art_img" src="assets/img/testImg04.jpg" alt="img">
                     </div>
                     <div class="art_pen">
                         <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
@@ -129,13 +139,14 @@
                         <h5 class="author">Andrew</h5>
                         <h5 class="loca">Taiwan, Taipei City</h5>
                     </div>
-                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
-                    </div>
                     <div class="info">
                         12345667
                     </div>
                 </td>
-            </tr><tr>
+            </tr>
+
+            <!--     --------------------------       -->
+            <tr>
                 <td class="article">
                     <div class="art_ctrl">
                         <div class="ico plus"></div>
@@ -143,7 +154,7 @@
                         <div class="ico minus"></div>
                     </div>
                     <div class="art_img">
-                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                        <img class="art_img" src="assets/img/testImg05.jpg" alt="img">
                     </div>
                     <div class="art_pen">
                         <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
@@ -153,24 +164,10 @@
                         <h5 class="author">Andrew</h5>
                         <h5 class="loca">Taiwan, Taipei City</h5>
                     </div>
-                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
-                    </div>
                     <div class="info">
                         12345667
                     </div>
                 </td>
-            </tr>
-            <tr>
-                <td class="article"></td>
-            </tr>
-            <tr>
-                <td class="article"></td>
-            </tr>
-            <tr>
-                <td class="article"></td>
-            </tr>
-            <tr>
-                <td class="article"></td>
             </tr>
         </table>
     </div>
@@ -187,6 +184,28 @@
         </div>
     </div>
 
+
 </body>
+
+<script>
+    $(document).ready(function () {
+        changeClass('.contentList', 'contentList-show');
+        changeClass('.article', 'article-show');
+        changeClass('.art_ctrl', 'art_ctrl-show');
+        changeClass('.art_ctrl', 'art_ctrl-show');
+        changeClass('.ico', 'ico-show');
+        changeClass('.like', 'like-show');
+        changeClass('.art_pen', 'art_pen-show');
+        changeClass('.pen_title', 'pen_title-show');
+        changeClass('.pen_title_sec', 'pen_title_sec-show');
+        changeClass('.art_author', 'art_author-show');
+        changeClass('.cursor', 'cursor-show');
+    });
+
+
+    function changeClass(c1, c2) {
+        $(c1).removeClass(c1.replace('.', '')).addClass(c2);
+    }
+</script>
 
 </html>

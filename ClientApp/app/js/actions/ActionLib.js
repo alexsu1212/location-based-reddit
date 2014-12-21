@@ -14,23 +14,20 @@ var ActionLib = {
      *
      * app 啟動後，第一次載入資料
      */
-    load: function(gpsData){
+    load: function(){
 
         $.ajax('http://localhost:3000/api/pins/',
         {
 
             type:"GET",
 
-            data: gpsData,
-
             //
             success: function(data, status, jqxhr){
-                
-                // alert(gpsData[0]);
+
                 // console.log( 'xhr 取回資料: ', data );
 
                 AppDispatcher.handleViewAction({
-                    
+
                     // type 是為了方便將來所有 Store 內部判斷是否要處理這個 action
                     actionType: AppConstants.APP_LOAD,
 

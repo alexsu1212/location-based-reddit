@@ -40,17 +40,15 @@ var comp = React.createClass({
                         <img className="art_img" src={"assets/img/testImg01.jpg"} alt="img" />
                     </div>
                     <div className="art_pen">
-                        <h3 className="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h3 className="pen_title">{this.props.todoItem.title}</h3>
                         <h5 className="pen_title_sec">something really good to eat, I with everyone can ...</h5>
                     </div>
                     <div className="art_author">
                         <h5 className="author">Andrew</h5>
                         <h5 className="loca">Taiwan, Taipei City</h5>
+                     <img class="cursor" src="assets/img/cursor.png" alt="cursor">
                     </div>
                 </td>
-                    <div  className="info">
-                        12345667
-                    </div>
             </tr>
     );
 

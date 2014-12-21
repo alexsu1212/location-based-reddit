@@ -59,6 +59,7 @@
     color: #7b7b7b;
 }
 .art_author {
+    position: relative;
     width: 20%;
     height: 100%;
 }
