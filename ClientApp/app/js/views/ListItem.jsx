@@ -40,7 +40,7 @@ var comp = React.createClass({
                         <img className="art_img" src={"assets/img/testImg01.jpg"} alt="img" />
                     </div>
                     <div className="art_pen">
-                        <h3 className="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h3 className="pen_title">{this.props.todoItem.title}</h3>
                         <h5 className="pen_title_sec">something really good to eat, I with everyone can ...</h5>
                     </div>
                     <div className="art_author">
