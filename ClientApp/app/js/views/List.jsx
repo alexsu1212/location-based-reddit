@@ -54,19 +54,18 @@ var comp = React.createClass({
 
   getLocation: function() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function() {
-        latUser = self.coords.latitude;
-        lonUser = self.his.coords.longitude;
-        var posi = lonUser + ',' + latUser;
-
-        actions.load(posi);
-      });
+      navigator.geolocation.getCurrentPosition(function(position) {
+        latUser = position.coords.latitude;
+        lonUser = position.coords.longitude;
+        actions.load();
+      })
     }
 
     // else {
     //   alert("Geolocation is not supported by this browser.");
     // }
   },
+
 
   getDistance: function(pin) {
     lonPin = pin.location.lon;
