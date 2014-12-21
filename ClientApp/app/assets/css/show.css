@@ -1,0 +1,34 @@
+.show {
+    position: absolute;
+    top: 100px;
+    left: 60%;
+    width: 37%;
+    height: 80%;
+    background-color: #39c03e;
+}
+.show-title {
+    margin-top: 26px;
+    text-align: center;
+}
+.show-pin {
+    margin-top: 22px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.show-author {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    margin-top: -30px;
+    background-color: #e34949;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 1px 1px 1px #918d8d;
+}
+.show-author>div{
+    float: left;
+    margin-left: 20%;
+    margin-top:5px;
+}
