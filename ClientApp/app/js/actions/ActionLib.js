@@ -26,7 +26,7 @@ var ActionLib = {
             //
             success: function(data, status, jqxhr){
                 
-                alert(gpsData[0]);
+                // alert(gpsData[0]);
                 // console.log( 'xhr 取回資料: ', data );
 
                 AppDispatcher.handleViewAction({
