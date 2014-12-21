@@ -21,8 +21,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    alert("Latitude: " + position.coords.latitude +
-        "\nLongitude: " + position.coords.longitude);
+//    alert("Latitude: " + position.coords.latitude +
+//        "\nLongitude: " + position.coords.longitude);
 
     var posi = {
         position.coords.latitude, position.coords.longitude

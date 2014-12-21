@@ -25,11 +25,12 @@ var ActionLib = {
 
             //
             success: function(data, status, jqxhr){
-
+                
+                alert(gpsData[0]);
                 // console.log( 'xhr 取回資料: ', data );
 
                 AppDispatcher.handleViewAction({
-
+                    
                     // type 是為了方便將來所有 Store 內部判斷是否要處理這個 action
                     actionType: AppConstants.APP_LOAD,
 

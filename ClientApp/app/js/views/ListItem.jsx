@@ -48,13 +48,13 @@ var comp = React.createClass({
                         <h5 className="loca">Taiwan, Taipei City</h5>
                     </div>
                 </td>
+                    <div  className="info">
+                        12345667
+                    </div>
             </tr>
     );
 
   },
-//                    <div  className="info">
-//                        12345667
-//                    </div>
 
   /**
    *
