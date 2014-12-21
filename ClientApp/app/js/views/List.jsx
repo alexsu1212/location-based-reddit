@@ -27,7 +27,7 @@ var comp = React.createClass({
       // 注意每個 item 要有一個獨一無二的 key 值
       return <ListItem
 
-              todoItem={item}
+              item={item}
               selected={this.props.truth.selectedItem == item}
               key={item.id}
 
