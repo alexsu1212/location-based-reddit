@@ -118,8 +118,9 @@ var MainApp = React.createClass({
         return (
             <div className="wrapper">
 
-                 <Header />
+                <Header />
                 <List truth={this.state} />
+                <Show />
             </div>
         )
     },
