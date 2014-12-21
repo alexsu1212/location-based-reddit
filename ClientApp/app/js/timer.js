@@ -28,5 +28,5 @@ function showPosition(position) {
         position.coords.latitude, position.coords.longitude
     };
 
-    actions.createPin(posi);
+    actions.load(posi);
 }
