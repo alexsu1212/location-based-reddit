@@ -31,41 +31,42 @@ var comp = React.createClass({
 
     }, this)
 
-    
+
     return (
+      <div>
         <table className="table table-hover">
             {arr}
         </table>
+        <script></script>
+      </div>
     );
 
   },
     //
 //        <div className="splitBar"></div>
 //        <div className="contentList">
-    
-    function timer() {
-        getLocation();
-        setTimeout("timer()", timerTickLength);
+
+  timer: function() {
+    getLocation();
+    setTimeout("timer()", timerTickLength);
+  },
+
+  getLocation: function() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
     }
+  },
 
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            alert("Geolocation is not supported by this browser.");
-        }
-    }
+  showPosition: function(position) {
+  //    alert("Latitude: " + position.coords.latitude +
+  //        "\nLongitude: " + position.coords.longitude);
 
-    function showPosition(position) {
-    //    alert("Latitude: " + position.coords.latitude +
-    //        "\nLongitude: " + position.coords.longitude);
+    var posi = position.coords.latitude + ',' + position.coords.longitude;
 
-        var posi = {
-            position.coords.latitude, position.coords.longitude
-        };
-
-        actions.load(posi);
-    }
+    actions.load(posi);
+  },
   /**
    *
    */
