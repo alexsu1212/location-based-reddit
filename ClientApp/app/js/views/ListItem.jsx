@@ -40,7 +40,7 @@ var comp = React.createClass({
                         <img className="art_img" src={"assets/img/testImg01.jpg"} alt="img" />
                     </div>
                     <div className="art_pen">
-                        <h3 className="pen_title">{this.props.todoItem.title}</h3>
+                        <h3 className="pen_title">{this.props.item.title}</h3>
                         <h5 className="pen_title_sec">something really good to eat, I with everyone can ...</h5>
                     </div>
                     <div className="art_author">
@@ -82,8 +82,8 @@ var comp = React.createClass({
               // console.log( '新值為: ', val );
 
               // 準備將新值存入 store，方法一樣是操作 actionCreator
-              this.props.todoItem.name = val;
-              actions.updatePin( this.props.todoItem );
+              this.props.item.name = val;
+              actions.updatePin( this.props.item );
 
           }
       }.bind(this))
@@ -114,7 +114,7 @@ var comp = React.createClass({
 
     // 如果外界有傳入 onRemove handler，就觸發它，並且將自已身份也傳出去，方便後續處理
     if( this.props.onRemove ){
-        this.props.onRemove(this.props.todoItem);
+        this.props.onRemove(this.props.item);
     }
 
   },
