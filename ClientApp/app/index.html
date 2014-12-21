@@ -12,33 +12,52 @@
 
     <link rel="stylesheet" href="assets/css/homeShow.css" />
     <link rel="stylesheet" href="assets/css/show.css" />
-    
+
     <script>
-       function enterPin() {
-           var id = $(this).children(".info").text();
-           //            alert(id);
+        function enterPin() {
+            var id = $(this).children(".info").text();
+            //            alert(id);
 
-           changeClass('.contentList', 'contentList-show');
-           changeClass('.article', 'article-show');
-           changeClass('.art_ctrl', 'art_ctrl-show');
-           changeClass('.art_ctrl', 'art_ctrl-show');
-           changeClass('.ico', 'ico-show');
-           changeClass('.like', 'like-show');
-           changeClass('.art_pen', 'art_pen-show');
-           changeClass('.pen_title', 'pen_title-show');
-           changeClass('.pen_title_sec', 'pen_title_sec-show');
-           changeClass('.art_author', 'art_author-show');
-           changeClass('.show', 'show-now');
-           changeClass('.cursor-show', 'cursor');
-           $(this).children('.cursor').removeClass('cursor').addClass('cursor-show');
-       }
+            changeClass('.contentList', 'contentList-show');
+            changeClass('.article', 'article-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.ico', 'ico-show');
+            changeClass('.like', 'like-show');
+            changeClass('.art_pen', 'art_pen-show');
+            changeClass('.pen_title', 'pen_title-show');
+            changeClass('.pen_title_sec', 'pen_title_sec-show');
+            changeClass('.art_author', 'art_author-show');
+            changeClass('.show', 'show-now');
+            changeClass('.cursor-show', 'cursor');
+            $(this).children('.cursor').removeClass('cursor').addClass('cursor-show');
+        }
 
-       $("html, body").on('click', 'td', enterPin);
+        function leavePin() {
+            var id = $(this).children(".info").text();
+            //            alert(id);
 
-       function changeClass(c1, c2) {
-           $(c1).removeClass(c1.replace('.', '')).addClass(c2);
-       }
-   </script>
+            changeClass('.contentList-show', 'contentList');
+            changeClass('.article-show', 'article');
+            changeClass('.art_ctrl-show', 'art_ctrl');
+            changeClass('.art_ctrl-show', 'art_ctrl');
+            changeClass('.ico-show', 'ico');
+            changeClass('.art_pen-show', 'art_pen');
+            changeClass('.like-show', 'like');
+            changeClass('.pen_title-show', 'pen_title');
+            changeClass('.pen_title_sec-show', 'pen_title_sec');
+            changeClass('.art_author-show', 'art_author');
+            changeClass('.show-now', 'show');
+            changeClass('.cursor-show', 'cursor');
+        }
+
+        $("html, body").on('click', 'td', enterPin);  //enter
+        $("html, body").on('click', '.userImg', leavePin); //leave
+
+        function changeClass(c1, c2) {
+            $(c1).removeClass(c1.replace('.', '')).addClass(c2);
+        }
+    </script>
 
 </head>
 

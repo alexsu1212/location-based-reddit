@@ -31,8 +31,27 @@
             changeClass('.cursor-show', 'cursor');
             $(this).children('.cursor').removeClass('cursor').addClass('cursor-show');
         }
+        
+        function leavePin() {
+            var id = $(this).children(".info").text();
+            //            alert(id);
+
+            changeClass('.contentList-show','contentList');
+            changeClass('.article-show', 'article');
+            changeClass('.art_ctrl-show', 'art_ctrl');
+            changeClass('.art_ctrl-show', 'art_ctrl');
+            changeClass('.ico-show', 'ico');
+            changeClass('.art_pen-show', 'art_pen');
+            changeClass('.like-show', 'like');
+            changeClass('.pen_title-show', 'pen_title');
+            changeClass('.pen_title_sec-show', 'pen_title_sec');
+            changeClass('.art_author-show', 'art_author');
+            changeClass('.show-now', 'show');
+            changeClass('.cursor-show', 'cursor');
+        }
 
         $("html, body").on('click', 'td', enterPin);
+        $("html, body").on('click', '.userImg', leavePin);
 
         function changeClass(c1, c2) {
             $(c1).removeClass(c1.replace('.', '')).addClass(c2);
