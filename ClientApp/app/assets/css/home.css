@@ -67,10 +67,19 @@ html body {
 .splitBar {
     width: 90%;
     height: 1px;
-    background-color: .838383;
+    background-color: #838383;
     border-color: #c4c4c4;
     border-style: solid;
     border-width: 1px;
     margin-left: auto;
     margin-right: auto;
+}
+.cursor{
+    opacity: 0;
+    display: none;
+}
+
+.show{
+    opacity: 0;
+    display: none;
 }
