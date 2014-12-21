@@ -46,11 +46,9 @@ var comp = React.createClass({
                     <div className="art_author">
                         <h5 className="author">Andrew</h5>
                         <h5 className="loca">Taiwan, Taipei City</h5>
+                     <img class="cursor" src="assets/img/cursor.png" alt="cursor">
                     </div>
                 </td>
-                    <div  className="info">
-                        12345667
-                    </div>
             </tr>
     );
 
