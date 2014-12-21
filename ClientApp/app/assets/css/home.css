@@ -13,7 +13,7 @@ html body {
     float: left;
     margin-left: 100px;
 }
-.header>.header-by{
+.header>.header-by {
     margin-top: 25px
 }
 .bar {
@@ -31,7 +31,7 @@ html body {
     text-align: center;
     margin-top: 2px;
 }
-.bar>.info {
+.barInfo {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -39,20 +39,20 @@ html body {
     height: 46px;
     padding-left: 12px;
 }
-.bar>.info>* {
+.barInfo>* {
     float: left;
 }
-.bar>.info>h5 {
+.barInfo>h5 {
     clear: left;
     float: right;
     margin-right: 26px;
     margin-top: -40px;
 }
-.bar>.info>h5:hover {
+.barInfo>h5:hover {
     color: blue;
     cursor: pointer;
 }
-.bar>.info>.signIn {
+.barInfo>.signIn {
     margin-right: 90px;
 }
 .userImg {
