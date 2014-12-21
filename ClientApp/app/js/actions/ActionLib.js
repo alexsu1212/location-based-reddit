@@ -14,12 +14,14 @@ var ActionLib = {
      *
      * app 啟動後，第一次載入資料
      */
-    load: function(){
+    load: function(gpsData){
 
         $.ajax('http://localhost:3000/api/pins/',
         {
 
             type:"GET",
+
+            data: gpsData,
 
             //
             success: function(data, status, jqxhr){
