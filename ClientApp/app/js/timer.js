@@ -1,4 +1,4 @@
-var actions = require('../actions/AppActionCreator');
+var actions = require('../actions/ActionLib');
 
 var timerTickLength = 1000 * 60 * 5; //1秒 X 60 X 分鐘
 //var timerTickLength = 5000; //testing
