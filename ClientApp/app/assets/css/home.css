@@ -16,6 +16,12 @@ html body {
 .header>.header-by {
     margin-top: 25px
 }
+
+.create-data {
+    float: right;
+    margin-right: 30px;
+}
+
 .bar {
     position: absolute;
     top: 0px;
