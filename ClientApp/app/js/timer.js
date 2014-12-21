@@ -1,8 +1,10 @@
-//var timerTickLength = 1000 * 60 * 5; //1秒 X 60 X 分鐘
-var timerTickLength = 5000; //testing
+var actions = require('../actions/AppActionCreator');
+
+var timerTickLength = 1000 * 60 * 5; //1秒 X 60 X 分鐘
+//var timerTickLength = 5000; //testing
 
 $(document).ready(function () {
-    setTimeout("timer()", timerTickLength);
+    setTimeout("timer()", 0);
 });
 
 function timer() {
@@ -21,4 +23,10 @@ function getLocation() {
 function showPosition(position) {
     alert("Latitude: " + position.coords.latitude +
         "\nLongitude: " + position.coords.longitude);
+
+    var posi = {
+        position.coords.latitude, position.coords.longitude
+    };
+
+    actions.createPin(posi);
 }
