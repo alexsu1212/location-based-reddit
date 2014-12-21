@@ -16,7 +16,7 @@ var Header = React.createClass({
         <div className="bar">
             <h3 className="webSiteTitle">Location Based Reddit</h3>
 
-            <div className="info">
+            <div className="barInfo">
                 <img className="userImg" src="assets/img/userHeadImg.jpg" alt="userImg" />
                 <h3 className="userName">陳柏安</h3>
                 <h5 className="signIn">log In</h5>

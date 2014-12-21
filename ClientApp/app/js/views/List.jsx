@@ -31,7 +31,7 @@ var comp = React.createClass({
 
     }, this)
 
-    alert("hello");
+    
     return (
         <table className="table table-hover">
             {arr}
