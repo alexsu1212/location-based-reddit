@@ -43,6 +43,7 @@ module.exports = function(Pin) {
         function(err, results) {
           if (err) return err;
 
+          console.log('results', results);
           console.log( '\nfindAll: \n', require('util').inspect( results, false, 0, true), ' >err: ', err );
 
           next(null, results);
