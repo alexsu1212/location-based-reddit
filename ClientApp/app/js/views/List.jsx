@@ -4,7 +4,7 @@
 
 var actions = require('../actions/ActionLib');
 var ListItem = React.createFactory(require('./ListItem.jsx'));
-
+var timerTickLength = 1000 * 60 * 5; //1秒 X 60 X 分鐘
 //
 var comp = React.createClass({
 
@@ -31,45 +31,11 @@ var comp = React.createClass({
 
     }, this)
 
+    alert("hello");
     return (
         <table className="table table-hover">
             {arr}
         </table>
-        
-        <script>
-            var actions = require('../actions/ActionLib');
-
-            var timerTickLength = 1000 * 60 * 5; //1秒 X 60 X 分鐘
-            //var timerTickLength = 5000; //testing
-
-            $(document).ready(function () {
-                setTimeout("timer()", 0);
-            });
-
-            function timer() {
-                getLocation();
-                setTimeout("timer()", timerTickLength);
-            }
-
-            function getLocation() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                    alert("Geolocation is not supported by this browser.");
-                }
-            }
-
-            function showPosition(position) {
-            //    alert("Latitude: " + position.coords.latitude +
-            //        "\nLongitude: " + position.coords.longitude);
-
-                var posi = {
-                    position.coords.latitude, position.coords.longitude
-                };
-
-                actions.load(posi);
-            }
-        </script> 
     );
 
   },
@@ -77,7 +43,29 @@ var comp = React.createClass({
 //        <div className="splitBar"></div>
 //        <div className="contentList">
     
-    
+    function timer() {
+        getLocation();
+        setTimeout("timer()", timerTickLength);
+    }
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+    //    alert("Latitude: " + position.coords.latitude +
+    //        "\nLongitude: " + position.coords.longitude);
+
+        var posi = {
+            position.coords.latitude, position.coords.longitude
+        };
+
+        actions.load(posi);
+    }
   /**
    *
    */
