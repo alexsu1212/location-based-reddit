@@ -68,10 +68,3 @@ html body {
     clear: right;
     color: #9b9b9b;
 }
-.cursor-show{
-    position: relative;
-    top: -47px;
-    left: 120%;
-    height: 50px;
-    width: 100px;
-}

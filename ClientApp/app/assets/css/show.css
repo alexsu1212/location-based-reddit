@@ -1,4 +1,4 @@
-.show {
+.show-now {
     position: absolute;
     top: 100px;
     left: 60%;
@@ -27,8 +27,16 @@
     color: white;
     text-shadow: 1px 1px 1px #918d8d;
 }
-.show-author>div{
+.show-author>div {
     float: left;
     margin-left: 20%;
-    margin-top:5px;
+    margin-top: 5px;
+}
+.cursor-show {
+    position: relative;
+    margin-top: -50px;
+    top: 0%;
+    left: 98%;
+    height: 50px;
+    width: 100px;
 }

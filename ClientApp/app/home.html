@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="stylesheet" href="assets/css/homeShow.css" />
     <link rel="stylesheet" href="assets/css/list.css" />
+    <link rel="stylesheet" href="assets/css/show.css" />
     <script src="http://fb.me/react-with-addons-0.12.0-rc1.js"></script>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <script src="js/jquery-2.1.3.min.js"></script>
@@ -14,9 +15,28 @@
     <script>
         function enterPin() {
             var id = $(this).children(".info").text();
+            //            alert(id);
 
+            changeClass('.contentList', 'contentList-show');
+            changeClass('.article', 'article-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.art_ctrl', 'art_ctrl-show');
+            changeClass('.ico', 'ico-show');
+            changeClass('.like', 'like-show');
+            changeClass('.art_pen', 'art_pen-show');
+            changeClass('.pen_title', 'pen_title-show');
+            changeClass('.pen_title_sec', 'pen_title_sec-show');
+            changeClass('.art_author', 'art_author-show');
+            changeClass('.show', 'show-now');
+            changeClass('.cursor-show', 'cursor');
+            $(this).children('.cursor').removeClass('cursor').addClass('cursor-show');
         }
-        $('html, body').on('click', 'td', getLocation);
+
+        $("html, body").on('click', 'td', enterPin);
+
+        function changeClass(c1, c2) {
+            $(c1).removeClass(c1.replace('.', '')).addClass(c2);
+        }
     </script>
 </head>
 
@@ -61,6 +81,80 @@
                         <h5 class="author">Andrew</h5>
                         <h5 class="loca">Taiwan, Taipei City</h5>
                     </div>
+                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
+                    </div>
+                    <div class="info">
+                        12345667
+                    </div>
+                </td>
+            </tr><tr>
+                <td class="article">
+                    <div class="art_ctrl">
+                        <div class="ico plus"></div>
+                        <div class="like">3345</div>
+                        <div class="ico minus"></div>
+                    </div>
+                    <div class="art_img">
+                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                    </div>
+                    <div class="art_pen">
+                        <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h5 class="pen_title_sec">something really good to eat, I with everyone can ...</h5>
+                    </div>
+                    <div class="art_author">
+                        <h5 class="author">Andrew</h5>
+                        <h5 class="loca">Taiwan, Taipei City</h5>
+                    </div>
+                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
+                    </div>
+                    <div class="info">
+                        12345667
+                    </div>
+                </td>
+            </tr><tr>
+                <td class="article">
+                    <div class="art_ctrl">
+                        <div class="ico plus"></div>
+                        <div class="like">3345</div>
+                        <div class="ico minus"></div>
+                    </div>
+                    <div class="art_img">
+                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                    </div>
+                    <div class="art_pen">
+                        <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h5 class="pen_title_sec">something really good to eat, I with everyone can ...</h5>
+                    </div>
+                    <div class="art_author">
+                        <h5 class="author">Andrew</h5>
+                        <h5 class="loca">Taiwan, Taipei City</h5>
+                    </div>
+                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
+                    </div>
+                    <div class="info">
+                        12345667
+                    </div>
+                </td>
+            </tr><tr>
+                <td class="article">
+                    <div class="art_ctrl">
+                        <div class="ico plus"></div>
+                        <div class="like">3345</div>
+                        <div class="ico minus"></div>
+                    </div>
+                    <div class="art_img">
+                        <img class="art_img" src="assets/img/testImg01.jpg" alt="img">
+                    </div>
+                    <div class="art_pen">
+                        <h3 class="pen_title">Good Retaurant Sharing ~!!</h3>
+                        <h5 class="pen_title_sec">something really good to eat, I with everyone can ...</h5>
+                    </div>
+                    <div class="art_author">
+                        <h5 class="author">Andrew</h5>
+                        <h5 class="loca">Taiwan, Taipei City</h5>
+                    </div>
+                    <img class="cursor" src="assets/img/cursor.png" alt="cursor">
+                    </div>
                     <div class="info">
                         12345667
                     </div>
@@ -81,7 +175,17 @@
         </table>
     </div>
 
-
+    <div class="show">
+        <h2 class="show-title">Good Retaurant Sharing ~!!</h2>
+        <div class="splitBar"></div>
+        <div class="show-pin">
+            BEVERLY HILLS, Calif.—Poking a finger in Hollywood's eye as well as getting a jump on any potential porn parody contenders, Hustler Video has already announced plans to produce a porn parody of Sony's beleaguered comedy, The Interview, starring Seth Rogen and James Franco. Titled This Ain’t The Interview XXX, Hustler's spoof will also center on two civilians enlisted by the CIA to assassinate the leader of North Korea. It was inevitable. “If Kim Jong-un and his henchmen were upset before, wait till they see the movie we’re going to make,” said Hustler founder and chairman Larry Flynt. “I’ve spent a lifetime fighting for the First Amendment, and no foreign dictator is going to take away my right to free speech.”
+        </div>
+        <div class="show-author">
+            <div>Andrew</div>
+            <div>Taiwan, Taipei City</div>
+        </div>
+    </div>
 
 </body>
 
